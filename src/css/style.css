@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+body {
+    font-size: 12px;
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 300;
+    font-stretch: 100%;
+    src: url(https://fonts.gstatic.com/s/opensans/v35/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 50px; 
+    transition: all 0.5s;
+    z-index: 997;
+}
+.header-left h6 {
+    margin: 0;
+    font-size: 36.8px;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    color: white;
+}
+.header-center div {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.header-center span {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0 0px 30px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family:  'Open Sans';
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.header-center span:hover {
+    color: #ffc451;
+}
+/* Скрываем выпадающее меню по умолчанию */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    
+}
+/* Стили для пунктов меню */
+.dropdown-menu li {
+    padding: 12px 16px;
+    text-decoration: none;
+    list-style: none;
+    background-color: #fff;
+    font-family:  'Open Sans';
+    font-size: 12px;
+    
+}
+.dropdown-menu a{
+    color: #000;
+    font-family:  'Open Sans';
+    font-size: 12px;
+}
+/* Стили для заголовка меню */
+.dropdown-header h4{
+    cursor: pointer;
+    color: #fff;
+    padding-left: 30px;
+    font-family:  'Open Sans';
+    font-size: 12px;
+}
+/* При наведении на заголовок, показываем выпадающее меню */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-header:hover {
+    color: #ffc451;
+}
+/* Стили для подменю */
+.deep-dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; /* Поднимаем поверх основного меню */
+    left: 100%; /* Выравниваем с правым краем родительского элемента */
+    top: 0; /* Выравниваем с верхним краем родительского элемента */
+}
+
+/* При наведении на "Deep Drop Down", показываем подменю */
+.deep-dropdown:hover .deep-dropdown-menu {
+    display: block;
+}
+.menu-btn button {
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 25px 8px 25px;
+    margin-left: 20px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    display: inline-block;
+    border: 2px solid #ffc451;
+    background-color:transparent;
+}
+.menu-btn button:hover {
+    background: #ffbb38;
+    color: #343a40;
+}
+
+/*тут фоновое изображение*/
+.first{
+    background-image: url(/src/image/jpg/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 15rem;
+    text-align: center;
+}
+.first h1 {
+    text-align: center;
+    color: white;
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+.first h5 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 24px;
+    margin-bottom: 45px;
+}
+.second-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    width: 100%;
+}
+.boxs {
+    margin-right: 20px;
+}
+.second-container .boxs {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    flex: 0 0 auto;
+    width: 16.66666667%;
+    transition: ease-in-out 0.3s;
+    padding-top: 30px;
+    height: 150px;
+    min-width: 20%; 
+}
+.second-container a{
+    font-size: 23px;
+    color: #fff;
+    text-align: center;
+    transition: ease-in-out 0.3s;
+}
+.second-container .boxs:hover{
+   border: 2px solid #ffbb38;  
+}
+.second-container a:hover{
+    color: #ffbb38; 
+ }
+ .second-container .boxs i{
+    font-size: 32px;
+    line-height: 1;
+    color: #ffc451;
+}
+
+
+.second-list {
+    padding: 80px 70px;
+    overflow: hidden;
+    
+}
+.workspace {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    width: 100%;
+}
+.text-column {
+    width: 100%;
+    padding-right: 20px;
+}
+.text-column h2 {
+    font-size: 25;
+    font-family: sans-serif;
+    color: #444444;
+}
+.text-column h1 {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #444444;
+}
+.text-column em {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #444444;
+    }
+ol, ul, dl {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    }
+.image-column img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+  
+
+.client-line {
+    width: 100%;
+}
+.img-client {
+    height: 50px; 
+    text-align: center;
+}
+.img-client img {
+    margin-left: 30px;
+    margin-right: 25px; 
+    height: 45%;
+    filter: grayscale(100%); /* Преобразовать изображения в серый цвет */
+    transition: filter 0.3s; /* Добавить плавное переходное анимирование для псевдокласса :hover */
+}
+.img-client img:hover {
+    filter: grayscale(0%); /* Сделать изображения яркими при наведении */
+}
